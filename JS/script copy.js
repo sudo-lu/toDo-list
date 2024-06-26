@@ -12,13 +12,11 @@ const erase = document.querySelector('#erase')
 var lista = document.querySelector('#history');
 
 
-var _segundo = 50;
+var _segundo = 0;
 var _minuto = 0;
 var _hora = 0;
-var _millisegundo = 0;
 
 var controle = 0
-
 
 const _play = document.querySelector('#play');
 const _stop = document.querySelector('#stop');
@@ -51,7 +49,7 @@ var cron;
 
 function start () {
     stop();
-    cron = setInterval(() => {timer();}, 100);
+    cron = setInterval(() => {timer();}, 1000);
 }
 
 function stop() {
@@ -60,22 +58,12 @@ function stop() {
 }
 
 function timer() {
-    if ((_millisegundo += 10) == 100) {
-        _millisegundo = 0;
-        _segundo++;
-        segundo.innerHTML = _segundo;
-
-    }
     if (_segundo == 60) {
         _segundo = 0;
         _minuto++;
-        minuto.innerHTML = _minuto;
     }
     if (_minuto == 60 ) {
         _minuto = 0;
         _hora++;
-        hora.innerHTML = _hora
     }
 }
-
-
