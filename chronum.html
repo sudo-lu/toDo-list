@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRONUM</title>
+
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    
+        <section class="top_times">
+            <div class="user">User</div>
+            <div class="times">
+                <button type="button" class="time">01:15:09</button>
+                <button type="button" class="time">01:15:09</button>
+                <button type="button" class="time">+</button>
+            </div>
+            <div class="date">31/03/2024</div>
+        </section>
+
+        <section class="today_progress">
+            <h2>Seu total hoje:</h2>
+            <h1>01:25:05</h1>
+            <span class="progress_bar"></span>
+        </section>
+
+        <section class="history" id="history">
+
+            <!-- <div class="info">
+                <span class="comp_name">Nome da Empresa</span>
+                <span class="spend_time">00:15:00</span>
+                <span class="obs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor.</span>
+                <button class="erase" id="erase" onclick="erase()">X</button>
+            </div>
+
+            <div class="info">
+                <span class="comp_name">Nome da Empresa</span>
+                <span class="spend_time">00:15:00</span>
+                <span class="obs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor.</span>
+                <button class="erase">X</button>
+            </div> -->
+            
+         
+
+        </section>
+
+        <footer>
+            <section class="current_time">
+                <div class="timer" id="timer">
+                    <div id="hora">01</div>:
+                    <div id="minuto">15</div>:
+                    <div id="segundo">20</div>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="button">PLAY</button>
+                    <button type="button" class="button">STOP</button>
+                </div>
+            </section>
+
+            <section class="do_info">
+                <input type="text" class="do_comp_name" id="do_comp_name" placeholder="Nome da Empresa"></input>
+                <div class="sender">
+                    <input type="text" class="do_obs" id="do_obs" placeholder="Observação"></input>
+                    <button type="button" id="send" class="send" onclick="sender()">Enviar</button>
+                </div>  
+            </section>
+        </footer>
+
+<script src="JS/script.js"></script>
+</body>
+</html>
