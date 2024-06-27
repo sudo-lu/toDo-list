@@ -21,7 +21,11 @@
 
         <section class="today_progress">
             <h2>Seu total hoje:</h2>
-            <h1>01:25:05</h1>
+            <div class="day_progress" id="day_progress">
+                <h1 id="day_progress_hr">00</h1><h1>:</h1>
+                <h1 id="day_progress_min">00</h1><h1>:</h1> 
+                <h1 id="day_progress_sec">00</h1>
+            </div>
             <span class="progress_bar"></span>
         </section>
 
@@ -55,6 +59,7 @@
                 <div class="buttons" name="buttons">
                     <button type="button" name="play" class="button" id="play">PLAY</button>
                     <button type="button" name="stop" class="button" id="stop">STOP</button>
+                    <button type="button" name="reset" class="button" id="reset">RESET</button>
                 </div>
             </section>
 
