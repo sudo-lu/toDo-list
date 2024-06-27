@@ -108,39 +108,12 @@ function reset() {
 
 
 
-function increment () {
-
-    let time_sec = 0;
-    let time_min = 0;
-    let time_hr = 0;
-
-
-    for (let i = 0; i < registro.tempo.length; i++){
-        time_sec += Number(registro.tempo[i].segundo);
-        time_min += Number(registro.tempo[i].minuto);
-        time_hr += Number(registro.tempo[i].hora);
-    }
-
-    if (time_sec >= 60) {
-        time_sec -= 60
-        time_min += 1
-    }
-
-    if (time_min >= 60) {
-        time_min -= 60
-        time_hr += 1
-    }
-
-    console.log(time_hr, time_min, time_sec);
-    document.querySelector('#day_progress_hr').innerHTML = time_hr;
-    document.querySelector('#day_progress_min').innerHTML = time_min;
-    document.querySelector('#day_progress_sec').innerHTML = time_sec;
-}
-
+var time_sec = 0;
+var time_min = 0;
+var time_hr = 0;
 
 function sender() {
 
-    console.log(hora.value)
 
     lista.innerHTML += `
             <div class="info" id="a${controle}">
@@ -155,6 +128,23 @@ function sender() {
 
     controle += 1;
 
+
+
+    
+
+
+    time_sec += _segundo;
+    time_min += _minuto;
+    time_hr += _hora;
+
+    console.log(time_sec)
+
+    document.querySelector('#day_progress_hr').innerHTML = time_hr;
+    document.querySelector('#day_progress_min').innerHTML = time_min;
+    document.querySelector('#day_progress_sec').innerHTML = time_sec;
+
+
+    
     reset();
-    increment();
+    //increment();
 }
